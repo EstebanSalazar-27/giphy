@@ -12,6 +12,5 @@ export const getTrending = async () => {
     // Esta respuesta debe siempre ser transformada mediante el uso de json(),
     // de esta manera sera utilizable en una aplicacion 
     const res = await fetching.json()
-    console.log(res)
     return res
 }
