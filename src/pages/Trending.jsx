@@ -28,13 +28,13 @@ export const Trending = () => {
     return (
         <div>
 
-            <div className="flex gap-2 flex-wrap justify-center items-center">
+            <div className="flex gap-2 flex-wrap justify-center items-center p-4">
                 {trendingList.data
                     ?
                     trendingList.data.map((gif) => {
                         return (
-                            <div key={gif.id} className="bg-sky-500 min-w-[200px] min-h-[200px]">
-                                <img width={gif.images.downsized_medium.width} height={gif.images.downsized_medium.height} src={gif.images.downsized_medium.url} alt="" />
+                            <div key={gif.id} className="bg-sky-500 basis-full sm:basis-2/6  md:basis-1/6  min-w-[200px]">
+                                <img className="object-cover  w-full h-60"   src={gif.images.downsized_medium.url} alt="" />
                                 <h2>{gif.username ? gif.username : "Anonimo"}</h2>
 
                             </div>
